@@ -1,0 +1,1 @@
+This was a group project, I at the time of doing was proud of my work because it was difficult at the time but i completed it almost perfectly by 2 year standart, and the pages that i did were: gestao-de-registos.php, gestao-de-itens.php, edicao-de-dados.php
