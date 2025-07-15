@@ -1,0 +1,153 @@
+/* estilos.css */
+
+/* Estilo para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+tr{
+    border: 2px solid #000;
+    padding: 15px;
+    text-align: left;
+}
+
+th, td {
+    outline: 1px solid #000; /* Bordas a negrito de 3px para cada célula */
+    padding: 8px;
+    text-align: left;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+p {
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+}
+
+
+/* Estilo do botão */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    background-color: #333; /* Cor de fundo inicial */
+    color: white; /* Cor do texto */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    overflow: hidden; /* Oculta partes fora do elemento */
+    position: relative; /* Necessário para o pseudo-elemento */
+    transition: all 0.3s ease; /* Suaviza as transições */
+}
+
+/* Efeito ao passar o mouse */
+.back-button:hover {
+    width: 60px; /* Reduz a largura do botão */
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+    color: transparent; /* Esconde o texto */
+}
+
+/* Seta que aparece ao passar o mouse */
+.back-button::after {
+    content: ''; /* Elemento vazio para a seta */
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid white; /* Cor da seta */
+    left: 20px; /* Posição inicial */
+    opacity: 0; /* Invisível inicialmente */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animação suave */
+}
+
+/* Exibe a seta ao passar o mouse */
+.back-button:hover::after {
+    opacity: 1; /* Torna a seta visível */
+    transform: translateX(-10px); /* Move a seta para a esquerda */
+}
+
+/* Estilo da lista principal */
+.main-list {
+    list-style: none; /* Remove os estilos padrão */
+    padding: 0;
+    margin: 0;
+}
+
+.main-list .title {
+    position: relative;
+    padding-left: 40px; /* Espaço para o círculo */
+    font-size: 18px; /* Tamanho do texto do título */
+    font-weight: bold; /* Negrito para o título */
+    margin-bottom: 10px;
+}
+
+.main-list .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px; /* Tamanho do círculo */
+    height: 15px;
+    border-radius: 50%; /* Transforma em círculo */
+    background: white; /* Fundo branco */
+    border: 2px solid black; /* Borda preta */
+    box-sizing: border-box; /* Garante que o tamanho inclua a borda */
+    animation: rotate-border 2s linear infinite; /* Animação de rotação */
+}
+
+/* Sub-lista */
+.sub-list {
+    list-style: none; /* Remove os estilos padrão */
+    padding: 0;
+    margin: 0 0 0 20px; /* Recuo para a lista de itens */
+}
+
+.sub-list li {
+    position: relative;
+    padding-left: 40px; /* Espaço para o círculo */
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.sub-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px; /* Tamanho do círculo */
+    height: 15px;
+    border-radius: 50%; /* Transforma em círculo */
+    background: white; /* Fundo branco */
+    border: 2px solid black; /* Borda preta */
+    box-sizing: border-box; /* Garante que o tamanho inclua a borda */
+    animation: rotate-border 2s linear infinite; /* Animação de rotação */
+}
+
+/* Animação de rotação da borda */
+@keyframes rotate-border {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
